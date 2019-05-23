@@ -80,9 +80,18 @@ let inventory = [
 
 // ** Second Answer **
 function carFinder(id) {
-    var b = (id - 1);
-    var a = (inventory[b]);
-    return ("Car with ID " + id + " is a " + (a["car_year"]) + " " + (a["car_make"]) + " " + (a["car_model"]));
+  var b = id - 1;
+  var a = inventory[b];
+  return (
+    "Car with ID " +
+    id +
+    " is a " +
+    a["car_year"] +
+    " " +
+    a["car_make"] +
+    " " +
+    a["car_model"]
+  );
 }
 console.log(carFinder(33));
 // ==== Challenge 2 ====
@@ -147,9 +156,9 @@ let oldCars = [];
 
 // ** Second Answer **
 function findDinosaurs(obj) {
-    if (obj < 2000) {
-        oldCars.push(obj);
-    }
+  if (obj < 2000) {
+    oldCars.push(obj);
+  }
 }
 carYears.filter(findDinosaurs);
 console.log(oldCars.length);
